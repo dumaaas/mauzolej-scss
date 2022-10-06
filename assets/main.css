@@ -1,0 +1,658 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sky {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#588BB6), to(#829CB5));
+  background: linear-gradient(to bottom, #588BB6, #829CB5);
+  overflow: hidden;
+}
+
+.cloud {
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin-top: -30px;
+  margin-left: -30px;
+  background: #FFFFFF;
+  height: 60px;
+  width: 60px;
+  -webkit-box-shadow: 65px -15px 0 -5px #FFFFFF, 25px -25px #FFFFFF, 30px 10px #FFFFFF, 60px 15px 0 -10px #FFFFFF, 85px 5px 0 -5px #FFFFFF;
+          box-shadow: 65px -15px 0 -5px #FFFFFF, 25px -25px #FFFFFF, 30px 10px #FFFFFF, 60px 15px 0 -10px #FFFFFF, 85px 5px 0 -5px #FFFFFF;
+}
+
+.cloud.cloud_two {
+  top: 25%;
+  right: 10%;
+  left: auto;
+}
+
+.mauzolej {
+  width: 630px;
+  height: 800px;
+  position: relative;
+}
+
+.mauzolej .wall-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mauzolej .brick {
+  width: 45px;
+  height: 15px;
+  background-color: #C5B3A6;
+  border: 1px solid #5D5247;
+}
+
+.mauzolej .brick.brick-dark {
+  background-color: #626262;
+  border: 1px solid #4C4C4C;
+}
+
+.mauzolej .brick.small {
+  width: 30px;
+}
+
+.mauzolej .brick.big {
+  width: 55px;
+}
+
+.mauzolej .brick.large {
+  width: 65px;
+}
+
+.mauzolej .brick.dark {
+  background-color: #A18A74;
+}
+
+.mauzolej .brick.solid {
+  background-color: #B0A297;
+}
+
+.mauzolej .brick.gray {
+  background-color: #8F7E75;
+}
+
+.mauzolej-side {
+  position: absolute;
+  top: 150px;
+  width: 220px;
+  height: 250px;
+  background-color: #CCBAAD;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 100;
+}
+
+.mauzolej-side.right {
+  right: 0px;
+}
+
+.mauzolej-gate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  position: absolute;
+  top: 230px;
+  left: 220px;
+  width: 190px;
+  height: 150px;
+  background-color: #000;
+  z-index: 30;
+}
+
+.mauzolej-gate_line {
+  margin-top: 20px;
+  height: 130px;
+  width: 1px;
+  background-color: #5c5d5b;
+}
+
+.mauzolej-gate_line.big {
+  background-color: #4C4C4C;
+  height: 140px;
+  margin-top: 10px;
+  width: 5px;
+  border-radius: 90px;
+}
+
+.mauzolej-gate_line-across {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #4C4C4C;
+  top: 40px;
+}
+
+.mauzolej-gate_line-across.bottom {
+  top: auto;
+  bottom: 15px;
+}
+
+.mauzolej-plate {
+  position: absolute;
+  top: 200px;
+  left: 220px;
+  width: 190px;
+  height: 30px;
+  background-color: #505050;
+  z-index: 30;
+}
+
+.mauzolej-roof {
+  position: absolute;
+}
+
+.mauzolej-roof.bottom {
+  top: 115px;
+  left: 195px;
+  width: 240px;
+  height: 80px;
+  background-color: #626262;
+  z-index: 10;
+}
+
+.mauzolej-roof.bottom::before {
+  content: '';
+  position: absolute;
+  z-index: 20;
+  width: 156px;
+  height: 156px;
+  background-color: #000;
+  border: 10px solid #4C4C4C;
+  border-radius: 100%;
+  left: 32px;
+  top: 46px;
+}
+
+.mauzolej-roof.top {
+  top: 55px;
+  left: 195px;
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 60px solid #626262;
+  z-index: 1;
+}
+
+.mauzolej-roof.top::before {
+  content: '';
+  position: absolute;
+}
+
+.mauzolej-antenna {
+  position: absolute;
+  top: 59px;
+  height: 91px;
+  width: 4px;
+  background-color: #798090;
+  right: 160px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.mauzolej-stairs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 380px;
+  left: 220px;
+  width: 190px;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+  z-index: 10;
+}
+
+.mauzolej-stairs .step {
+  background-color: #626262;
+  width: 100%;
+  height: 15px;
+  border-bottom: 2px solid #4C4C4C;
+}
+
+.mauzolej-floor {
+  background-color: #DBCBBE;
+  position: absolute;
+  top: 405px;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+.mauzolej-floor_stairs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 505px;
+  z-index: 2;
+  width: 190px;
+  left: 220px;
+}
+
+.mauzolej-floor_stairs .step {
+  background-color: #CFBDB0;
+  width: 100%;
+  height: 15px;
+  border-bottom: 2px solid #A99583;
+}
+
+.mauzolej-wall {
+  position: absolute;
+  top: 404px;
+  left: -130px;
+  width: 350px;
+  height: 250px;
+  background-color: #C1A38F;
+  z-index: 100;
+  background-image: url("/assets/images/wall.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.mauzolej-wall.right {
+  left: auto;
+  right: -130px;
+}
+
+.mauzolej-flag {
+  position: absolute;
+  right: -199px;
+  top: 317px;
+  width: 200px;
+  height: 100px;
+}
+
+.mauzolej-flag.left {
+  left: -199px;
+  right: auto;
+}
+
+.mauzolej-flag.left .stick {
+  -webkit-transform: rotate(-17deg);
+          transform: rotate(-17deg);
+}
+
+.mauzolej-flag.left .shape {
+  -webkit-transform: rotate(-17deg);
+          transform: rotate(-17deg);
+  left: -13px;
+  border-left-color: #EAB623;
+  border-right-color: transparent;
+}
+
+.mauzolej-flag .stick {
+  position: absolute;
+  left: 96px;
+  top: 0;
+  width: 3px;
+  height: 100px;
+  -webkit-transform: rotate(17deg);
+          transform: rotate(17deg);
+  background-color: #B75B22;
+}
+
+.mauzolej-flag .shape {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 104px;
+  top: 17px;
+  -webkit-transform: rotate(17deg);
+          transform: rotate(17deg);
+  width: 100px;
+  height: 50px;
+  background-color: #E4010B;
+  border: 2px solid #EAB623;
+  border-left-color: transparent;
+}
+
+.mauzolej-flag .shape img {
+  width: 30px;
+  height: 31px;
+}
+
+.mauzolej-grass {
+  position: absolute;
+  top: 522px;
+  left: -1180px;
+  width: 0;
+  height: 0;
+  border-top: 500px solid transparent;
+  border-right: 1400px solid #6b9c58;
+  border-bottom: 500px solid transparent;
+  z-index: 100;
+}
+
+.mauzolej-grass.right {
+  border-left: 1400px solid #6b9c58;
+  border-right: 0 solid transparent;
+  right: -1180px;
+  left: auto;
+}
+
+.mauzolej-mountain {
+  position: absolute;
+  bottom: -35px;
+  left: -734px;
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 361px solid #6285A9;
+  z-index: 1;
+}
+
+.mauzolej-mountain.two {
+  left: -814px;
+  bottom: -20px;
+  opacity: .3;
+  z-index: 0;
+}
+
+.mauzolej-mountain.three {
+  left: -674px;
+  bottom: -10px;
+  opacity: .5;
+  z-index: 0;
+}
+
+.mauzolej-mountain.right {
+  left: auto;
+  right: -734px;
+}
+
+.mauzolej-mountain.right.two {
+  left: auto;
+  right: -814px;
+}
+
+.mauzolej-mountain.right.three {
+  left: auto;
+  right: -674px;
+}
+
+.mauzolej-mountain-top {
+  position: absolute;
+  right: -65px;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-bottom: 77px solid #ceeaf6;
+  z-index: 2;
+}
+
+.mauzolej-mountain-cap {
+  position: absolute;
+  top: 70px;
+  left: -55px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #ceeaf6;
+}
+
+.mauzolej-mountain-cap.two {
+  left: -25px;
+}
+
+.mauzolej-mountain-cap.three {
+  left: 5px;
+}
+
+.mauzolej-bush {
+  position: absolute;
+  width: 200px;
+  background-color: #358856;
+  z-index: 1000;
+  height: 50px;
+  top: 600px;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  right: 0;
+  z-index: 100;
+}
+
+.mauzolej-bush.two {
+  background-color: #25523B;
+  top: 630px;
+  right: -50px;
+  z-index: 102;
+}
+
+.mauzolej-bush.two .leaf {
+  background-color: #25523B;
+}
+
+.mauzolej-bush.three {
+  background-color: #0C3823;
+  z-index: 101;
+  right: -160px;
+  top: 618px;
+}
+
+.mauzolej-bush.three .leaf {
+  background-color: #0C3823;
+}
+
+.mauzolej-bush.four {
+  background-color: #0C3823;
+  right: auto;
+  left: -256px;
+  top: 642px;
+}
+
+.mauzolej-bush.four .leaf {
+  background-color: #0C3823;
+}
+
+.mauzolej-bush.five {
+  right: auto;
+  left: -362px;
+  top: 680px;
+}
+
+.mauzolej-bush .leaf {
+  position: absolute;
+  top: -8px;
+  left: -10px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: #358856;
+}
+
+.mauzolej-bush .leaf.two {
+  width: 30px;
+  height: 30px;
+  top: -20px;
+  left: 13px;
+}
+
+.mauzolej-bush .leaf.three {
+  top: -30px;
+  left: 30px;
+}
+
+.mauzolej-bush .leaf.four {
+  width: 70px;
+  height: 70px;
+  top: -46px;
+  left: 63px;
+}
+
+.mauzolej-bush .leaf.five {
+  width: 30px;
+  height: 30px;
+  top: -21px;
+  left: 122px;
+}
+
+.mauzolej-bush .leaf.six {
+  top: -30px;
+  left: 140px;
+}
+
+.mauzolej-bush .leaf.seven {
+  width: 40px;
+  height: 40px;
+  top: 6px;
+  left: 170px;
+}
+
+.mauzolej-stone {
+  position: absolute;
+  z-index: 1000;
+  top: 637px;
+  width: 171px;
+  height: 108px;
+  background: #eae6ed;
+  -webkit-box-shadow: inset -28px -22px 36px #778, inset 38px 18px 36px #fffffc, 12px 8px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: inset -28px -22px 36px #778, inset 38px 18px 36px #fffffc, 12px 8px 18px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 49% 68% 86% 200px /62% 54% 80% 180px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  right: -310px;
+}
+
+.mauzolej-stone.two {
+  right: -393px;
+  width: 100px;
+  height: 60px;
+  -webkit-box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+  top: 700px;
+}
+
+.mauzolej-stone.three {
+  right: -393px;
+  -webkit-box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+  top: 700px;
+  right: -330px;
+}
+
+.mauzolej-stone.four {
+  top: 689px;
+  right: -477px;
+  width: 120px;
+  height: 80px;
+}
+
+.mauzolej-stone.five {
+  right: -414px;
+  width: 100px;
+  height: 60px;
+  top: 756px;
+}
+
+.mauzolej-stone.six {
+  right: -592px;
+  width: 200px;
+  height: 120px;
+  top: 720px;
+}
+
+.mauzolej-stone.seven {
+  -webkit-box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+  right: -500px;
+  width: 80px;
+  height: 50px;
+  top: 796px;
+}
+
+.mauzolej-stone.eight {
+  right: -584px;
+  width: 90px;
+  height: 60px;
+  top: 807px;
+}
+
+.mauzolej-stone.nine {
+  right: -758px;
+  width: 200px;
+  height: 120px;
+  top: 770px;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.mauzolej-stone.ten {
+  right: -579px;
+  width: 140px;
+  height: 90px;
+  top: 825px;
+}
+
+.mauzolej-stone.eleven {
+  right: -448px;
+  width: 168px;
+  height: 106px;
+  top: 800px;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.mauzolej-stone.twelve {
+  right: -331px;
+  width: 90px;
+  height: 50px;
+  top: 789px;
+  -webkit-box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.mauzolej-stone.thirteen {
+  right: -381px;
+  width: 172px;
+  height: 130px;
+  top: 826px;
+  -webkit-box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: inset -28px -22px 36px #fffffc, inset 38px 18px 36px #778, 12px 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.mauzolej-stone.fourteen {
+  right: -275px;
+  width: 80px;
+  height: 50px;
+  top: 803px;
+}
+/*# sourceMappingURL=main.css.map */
